@@ -8,3 +8,4 @@ original_image = cv2.imread('./images/car.png')
 cv2.imshow('Original Image', original_image)
 
 cv2.waitKey(0)
+cv2.destroyAllWindows()
