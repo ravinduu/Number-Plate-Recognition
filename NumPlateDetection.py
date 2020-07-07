@@ -1,15 +1,15 @@
 import cv2
 import numpy as np 
-# import imutils
+import imutils
 
 #read the image
 original_image = cv2.imread('images/car.jpg',1)
 
-#resize original image (width = 500)
-# resized_image = imutils.resize(original_image, width=500)
+# resize original image (width = 500)
+resized_image = imutils.resize(original_image, width=500)
 
 #grayscale
-grayscale_image = cv2.cvtColor(original_image, cv2.COLOR_BGR2GRAY)
+grayscale_image = cv2.cvtColor(resized_image, cv2.COLOR_BGR2GRAY)
 #denoising
 denoised_image = cv2.medianBlur(grayscale_image, 3)
 
