@@ -33,7 +33,7 @@ def identifyNumberplateArea(edges,resized_image):
         cv2.imshow('contours',resized_image)
     except Exception as e:
         print("Error..",e)
-        sys.out()
+        sys.exit()
 
 def cleanImage():
     print('***image cleaning***')
@@ -46,9 +46,9 @@ def cleanImage():
         print('***image successfully cleaned***')
         identifyNumberplateArea(edges, resized_image)
 
-    except FileNotFoundError as f:
+    except Exception as f:
         print("Error..",f)
-        sys.out()
+        sys.exit()
 
 
 def main():
